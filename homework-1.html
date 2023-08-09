@@ -109,8 +109,39 @@
                 <strong> 28° </strong></p>
         </li>
     </ul>
-    <button> Change city </button>
+    <button> Change city  </button>
 
     <p> coded by Suzy Datewo </p>
+ 
+
+
+    <script>
+
+        function changeNow () {
+            let city = prompt ("what city do you live in?");
+        let temperature = prompt ("what temperature is it?");
+
+        let h1 = document.querySelector ("h1");
+
+        if (temperature <0) {
+            h1.innerHTML =   " ☹️<br/>Currently "+ temperature +"°C in "+ city + "";
+        } else {
+           if (temperature >37) {
+            h1.innerHTML =  " 😓<br/>Currently "+ temperature +"°C in "+ city + "";
+        }else{
+            h1.innerHTML = " 😄<br/>Currently "+ temperature +"°C in "+ city +"";
+        }
+
+
+        }
+
+
+        }
+        
+
+        let changeCity = document.querySelector ("button");
+
+        changeCity.addEventListener ("click", changeNow);
+    </script>   
 </body>
 </html>
