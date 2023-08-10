@@ -25,6 +25,7 @@
         }
         ul{
             list-style-type: none;
+            padding: 0;
         }
         li{
             text-align: center;
@@ -70,7 +71,7 @@
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>weather</title>
 </head>
 <body>
     <h1>
@@ -111,8 +112,7 @@
     </ul>
     <button> Change city  </button>
 
-    <p> coded by Suzy Datewo </p>
- 
+    <p> coded by Suzy Datewo </p>  
 
 
     <script>
@@ -123,25 +123,17 @@
 
         let h1 = document.querySelector ("h1");
 
-        if (temperature <0) {
+        if (temperature < 0) {
             h1.innerHTML =   " ☹️<br/>Currently "+ temperature +"°C in "+ city + "";
         } else {
-           if (temperature >37) {
-            h1.innerHTML =  " 😓<br/>Currently "+ temperature +"°C in "+ city + "";
-        }else{
             h1.innerHTML = " 😄<br/>Currently "+ temperature +"°C in "+ city +"";
         }
-
-
-        }
-
-
-        }
+    }
         
 
         let changeCity = document.querySelector ("button");
 
         changeCity.addEventListener ("click", changeNow);
-    </script>   
+    </script> 
 </body>
 </html>
